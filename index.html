@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Odontológica Sorriso</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="img/vs resoluçao tv so video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+  <header>
+    <div class="container">
+      <img src="img/Ortodontia e ESTÉTICA.png" alt="Logo da Clínica Sorriso" class="logo">
+      <div class="buscador-wrapper">
+        <div class="buscador-falso" onclick="toggleSugestoes()">
+          <span id="textoSelecionado">Selecione uma opção</span>
+          <ul class="sugestoes" id="sugestoesLista">
+            <li onclick="selecionarSugestao('Bem Vindo(a)', '#bem')">Bem Vindo(a)</li>
+            <li onclick="selecionarSugestao('Invisalign', '#invisalign')">Invisalign</li>
+            <li onclick="selecionarSugestao('Clareamento Dental', '#clareamento')">Clareamento Dental</li>
+            <li onclick="selecionarSugestao('Próteses e Coroas', '#implantes')">Próteses e Coroas</li>
+            <li onclick="selecionarSugestao('Quem sou eu', '#quem')">Quem sou eu</li>
+            <li onclick="selecionarSugestao('Avaliações', '#avaliacoes')">Avaliações</li>
+            <li onclick="selecionarSugestao('Redes Sociais', '#redes')">Redes Sociais</li>
+          </ul>
+        </div>
+      </div>
+      
+      <a href="https://wa.me/5583999807691?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta!" 
+      target="_blank" class="agendar-btn">
+     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+     Agende sua consulta
+   </a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="bem">
+        <div class="hero-content animar">
+          <div class="hero-texto animar">
+            <h1>Bem-vindo(a) ao nosso site!</h1>
+            <p>Clínica odontológica especializada em Invisalign.</p>
+          </div>
+          <img src="img/julia 1.png" alt="Imagem decorativa" class="hero-imagem animar">
+        </div>
+      </section>
+  </main>
+  <main>
+  
+    <!-- Seção Especialidades e Serviços -->
+    <section class="especialidades">
+      <h2 class="texto animar">Especialidades e Serviços</h2>
+
+      <div class="cards animar" id="invisalign">
+        <div class="card destaque animar">
+          <div class="card-img animar">
+            <img src="img/invisalign.png" alt="Invisalign" class="card-image animar">
+          </div>
+          <h3>Invisalign</h3>
+          <p>Tratamento ortodôntico discreto e eficaz para um sorriso perfeito, sem os inconvenientes dos aparelhos tradicionais.</p>
+        </div>
+        <div class="card animar" id="implantes">
+          <div class="card-img animar">
+            <img src="img/coroa.png" alt="Implantes Dentários" class="card-image animar">
+          </div>
+          <h3>Implantes de Coroa\Próteses</h3>
+          <p>Reabilitação oral com implantes de coroa e próteses para um sorriso funcional e natural.</p>
+        </div>
+        <div class="card animar" id="clareamento">
+          <div class="card-img animar">
+            <img src="img/clareamento.png" alt="Clareamento Dental" class="card-image animar">
+          </div>
+          <h3>Clareamento Dental</h3>
+          <p>Melhore o brilho do seu sorriso com técnicas de clareamento profissional.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="quem-sou-eu" id="quem">
+    <div class="container-quem animar">
+      <div class="quem-texto animar">
+        <h2>Quem sou eu</h2>
+        <p>Olá! Sou a Dra. Júlia Vieira de Sá, especialista em ortodontia estética e alinhadores Invisalign. 
+          Tenho anos de experiência transformando sorrisos com técnicas modernas e personalizadas. 
+          Minha missão é proporcionar um atendimento humanizado, focado no bem-estar e na autoestima dos meus pacientes.</p>
+        <ul>
+          <li>● Graduada em Odontologia pela [Universidade]</li>
+          <li>● Especialista em Ortodontia e Invisalign</li>
+          <li>● Atualização constante em estética dental e reabilitação oral</li>
+        </ul>
+      </div>
+      <div class="quem-imagem animar">
+        <img src="img/julia 2.png" alt="Dra. Nome da Doutora" class="foto-dra animar">
+      </div>
+    </div>
+  </section>
+  <section class="avaliacoes" id="avaliacoes">
+    <div class="container-avaliacoes animar">
+      <img src="img/estrelas.png" alt="Imagem de avaliação" class="imagem-avaliacao animar">
+      
+      <div class="avaliacoes-texto animar">
+        <h2>Nos ajude deixando sua avaliação!</h2>
+        <p>Seu feedback é muito importante para continuarmos oferecendo um atendimento de excelência.</p>
+        <a href="https://g.page/r/CODIGO_DA_CLINICA/review" target="_blank" class="btn-avaliar animar">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/google.svg" alt="Google" class="icon-google animar">
+          Avaliar no Google
+        </a>
+      </div>
+    </div>
+  </section>  
+  <section class="redes-sociais" id="redes">
+    <div class="container-redes animar">
+      <h2>Siga-nos nas redes sociais</h2>
+      
+      <a href="https://www.instagram.com/SEU_USUARIO" target="_blank" class="instagram-link animar">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/instagram.svg" alt="Instagram" class="icon-instagram animar">
+        @dra.juliavieira
+      </a>
+  
+      <div class="qr-code animar">
+        <img src="img/qr instagram.png" alt="QR Code para Instagram">
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="index.js"></script>
+</body>
+<footer class="site-footer">
+    <p>© 2025 Todos os direitos reservados à Doutora Júlia Vieira de Sá — Criadora do Site: <a href="https://www.instagram.com/SEU_USUARIO" target="_blank">JessK_Design</a></p>
+  </footer>
+  
+</html>

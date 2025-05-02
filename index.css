@@ -1,0 +1,499 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+  }
+  
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(px); /* Desfoque do vídeo */
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Camada escura transparente */
+    z-index: -1;
+  }
+  
+  
+  /* Cabeçalho */
+  header {
+    background-color: rgba(255, 255, 255, 0.7); /* Branco com 70% de opacidade */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px); /* Efeito de desfoque no fundo */
+    -webkit-backdrop-filter: blur(8px); /* Compatibilidade com Safari */
+    position: sticky; /* Fixa no topo, opcional */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 100px;
+  }
+  .buscador-wrapper {
+    position: relative;
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
+  }
+  
+  .buscador-falso {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    font-size: 0.95rem;
+  }
+  
+  .buscador-falso:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .sugestoes {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+  }
+  
+  .sugestoes li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .sugestoes li:hover {
+    background-color: #eee;
+  }
+  
+  .agendar-btn {
+    display: flex;
+    align-items: center;
+    background-color: #6a5b4c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    gap: 10px;
+  }
+  
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+  }
+  
+  
+  .agendar-btn:hover {
+    background-color: #493e34;
+  }
+  
+  /* Hero Section (opcional) */
+  .hero {
+    padding: 60px 20px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(270deg, #f6e27a, #c19a6b, #f6e27a);
+    background-size: 600% 600%;
+    animation: ondaDourada 10s ease infinite;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin: 40px auto;
+    max-width: 1100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes ondaDourada {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente */
+    position: relative;
+    z-index: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 100%; /* Garante alinhamento vertical */
+  }
+  
+  .hero-texto {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: rgb(20, 20, 20);
+  }
+  
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .hero-imagem {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    align-self: flex-end; /* Garante que gruda na parte de baixo */
+    margin-bottom: -60px; /* Opcional: ainda mais colado na borda */
+  }
+  
+
+
+  /* Estilo da seção Especialidades */
+/* Estilo da seção Especialidades */
+.especialidades {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .especialidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:  rgba(20,20,20); /* Cor dourada ou similar */
+  }
+  
+  /* Cards de especialidades */
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilo dos Cards */
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* Muda o cursor para indicar que o card é clicável */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Efeito de hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card destaque do Invisalign */
+  .card.destaque {
+    background-color: #74a5d6;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img {
+    margin-bottom: 20px;
+  }
+  
+  .card-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:  rgba(20,20,20);
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+  }
+/* Estilo para o link de cada card */
+.card a {
+    color: inherit;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+  }
+  .quem-sou-eu {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 40px;
+  }
+  
+  .container-quem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .quem-texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .quem-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgba(20, 20,20);
+  }
+  
+  .quem-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .quem-texto ul {
+    list-style: none;
+    padding-left: 0;
+    color: #333;
+  }
+  
+  .quem-texto ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .quem-imagem {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .foto-dra {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .avaliacoes {
+    background: linear-gradient(135deg, #f6e27a, #c19a6b);
+    color: #222;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .container-avaliacoes {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .avaliacoes-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .avaliacoes-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .btn-avaliar {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4285f4;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+    gap: 10px;
+  }
+  
+  .btn-avaliar:hover {
+    background-color: #3367d6;
+  }
+  
+  .icon-google {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+  }
+  .imagem-avaliacao {
+    max-width: 30%;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .redes-sociais {
+    background-color: #fafafa;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .redes-sociais h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3d3d3d;
+  }
+  
+  .instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #E1306C;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .icon-instagram {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(89%) saturate(7434%) hue-rotate(328deg) brightness(91%) contrast(104%);
+  }
+  
+  .qr-code img {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+  }
+  .site-footer {
+    background-color: #6a5b4c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .site-footer a {
+    color: #011031;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsividade com media queries */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-content {
+      flex-direction: column;
+  }
+
+  .cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      flex-basis: 90%;
+      margin-bottom: 20px;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .buscador-wrapper {
+      max-width: 100%;
+  }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.5rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .card h3 {
+      font-size: 1.2rem;
+  }
+
+  .card p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Animação de entrada */
+@keyframes entrada {
+  0% {
+      opacity: 0;
+      transform: translateY(50px); /* Elemento começa mais abaixo */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Elemento se move para a posição final */
+  }
+}
+
+/* Definir a classe que será adicionada via JS quando o elemento estiver visível */
+.entrar {
+  animation: entrada 1s ease-out forwards;
+}
