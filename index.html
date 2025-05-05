@@ -10,7 +10,7 @@
   <div class="fundo-desfocado"></div>
   <header>
     <div class="container">
-      <img src="img/Ortodontia e ESTÉTICA.png" alt="Logo da Clínica Sorriso" class="logo">
+      <img src="img/Ortodontia e ESTÉTICA.png" alt="Logo da Clínica" class="logo">
       <div class="buscador-wrapper">
         <div class="buscador-falso" onclick="toggleSugestoes()">
           <span id="textoSelecionado">Selecione uma opção</span>
@@ -18,8 +18,10 @@
             <li onclick="selecionarSugestao('Bem Vindo(a)', '#bem')">Bem Vindo(a)</li>
             <li onclick="selecionarSugestao('Invisalign', '#invisalign')">Invisalign</li>
             <li onclick="selecionarSugestao('Clareamento Dental', '#clareamento')">Clareamento Dental</li>
-            <li onclick="selecionarSugestao('Próteses e Coroas', '#implantes')">Próteses e Coroas</li>
+            <li onclick="selecionarSugestao('Ortodontia Infantil', '#infantil')">Ortodontia Intantil\Ortopedia</li>
+            <li onclick="selecionarSugestao('Aparelho Fixo', '#fixo')">Aparelho Fixo</li>
             <li onclick="selecionarSugestao('Quem sou eu', '#quem')">Quem sou eu</li>
+            <li onclick="selecionarSugestao('Sobre Nossa Clínica', '#clinica')">Nossa Clínica</li>
             <li onclick="selecionarSugestao('Avaliações', '#avaliacoes')">Avaliações</li>
             <li onclick="selecionarSugestao('Redes Sociais', '#redes')">Redes Sociais</li>
           </ul>
@@ -37,8 +39,11 @@
     <section class="hero" id="bem">
         <div class="hero-content animar">
           <div class="hero-texto animar">
-            <h1>Bem-vindo(a) ao nosso site!</h1>
-            <p>Clínica odontológica especializada em Invisalign.</p>
+            <h1>Doutora Júlia Vieira</h1>
+            <p>Ortodontia e Estética</p>
+            <div class="mini-logo">
+              <img src="img/logo 2.png" alt="Mini Logo da Clínica">
+            </div>
           </div>
           <img src="img/julia 1.png" alt="Imagem decorativa" class="hero-imagem animar">
         </div>
@@ -58,12 +63,12 @@
           <h3>Invisalign</h3>
           <p>Tratamento ortodôntico discreto e eficaz para um sorriso perfeito, sem os inconvenientes dos aparelhos tradicionais.</p>
         </div>
-        <div class="card animar" id="implantes">
+        <div class="card animar" id="infantil">
           <div class="card-img animar">
-            <img src="img/coroa.png" alt="Implantes Dentários" class="card-image animar">
+            <img src="img/infantil.png" alt="Ortodontia infantil" class="card-image animar">
           </div>
-          <h3>Implantes de Coroa\Próteses</h3>
-          <p>Reabilitação oral com implantes de coroa e próteses para um sorriso funcional e natural.</p>
+          <h3>Ortodontia Infantil / Ortopedia</h3>
+          <p>Previne e corrige alterações no crescimento ósseo e na oclusão infantil, guiando o desenvolvimento adequado dos maxilares com o uso de aparelhos ortopédicos funcionais.</p>
         </div>
         <div class="card animar" id="clareamento">
           <div class="card-img animar">
@@ -72,6 +77,13 @@
           <h3>Clareamento Dental</h3>
           <p>Melhore o brilho do seu sorriso com técnicas de clareamento profissional.</p>
         </div>
+        <div class="card animar" id="fixo">
+          <div class="card-img animar">
+            <img src="img/aparelho.png" alt="Aparelho Fixo" class="card-image animar">
+          </div>
+          <h3>Aparelho Fixo</h3>
+          <p>Tratamento ortodôntico tradicional com alta eficácia na correção de desalinhamentos dentários e problemas de mordida.</p>
+        </div>        
       </div>
     </section>
   </main>
@@ -85,6 +97,7 @@
         <ul>
           <li>● Graduada em Odontologia pela UFPB(universidade federal da Paraíba)</li>
           <li>● Especialista em Ortodontia e Invisalign</li>
+          <li>● Especialista em Prótese Dentaria</li>
           <li>● Atualização constante em estética dental e reabilitação oral</li>
         </ul>
       </div>
@@ -93,6 +106,44 @@
       </div>
     </div>
   </section>
+  <section class="sobre-clinica" id="clinica">
+    <div class="container-sobre animar">
+      <div class="carousel-wrapper animar">
+        <div class="carousel" id="carousel">
+          <img src="img/carrossel 1.png" alt="Foto da clínica 1" class="carousel-img active">
+          <img src="img/carrossel 2.png" alt="Foto da clínica 2" class="carousel-img">
+          <img src="img/carrossel 3.png" alt="Foto da clínica 3" class="carousel-img">
+          <img src="img/carrossel 4.png" alt="Foto da clínica 4" class="carousel-img">
+          <img src="img/carrossel 5.png" alt="Foto da clínica 5" class="carousel-img">
+          <img src="img/carrossel 6.png" alt="Foto da clínica 6" class="carousel-img">
+          <img src="img/carrossel 7.png" alt="Foto da clínica 7" class="carousel-img">
+          <img src="img/carrossel 8.png" alt="Foto da clínica 8" class="carousel-img">
+          <img src="img/carrossel 9.png" alt="Foto da clínica 9" class="carousel-img">
+          <img src="img/carrossel 10.png" alt="Foto da clínica 10" class="carousel-img">
+          <img src="img/carrossel 11.png" alt="Foto da clínica 11" class="carousel-img">
+          <img src="img/carrossel 12.png" alt="Foto da clínica 12" class="carousel-img">
+          <!-- Adicione mais imagens conforme desejar -->
+          <button class="carousel-btn prev" onclick="mudarSlide(-1)">❮</button>
+          <button class="carousel-btn next" onclick="mudarSlide(1)">❯</button>
+          <div class="carousel-indicadores animar" id="indicadores"></div>
+        </div>
+      </div>
+      <div class="texto-sobre animar">
+        <h2>Sobre nossa clínica</h2>
+        <p>Na VS Odontologia, oferecemos um ambiente moderno, confortável e acolhedor. Nossa estrutura é equipada com tecnologia de ponta para garantir segurança, precisão e bem-estar em todos os atendimentos. Cada detalhe foi pensado para proporcionar uma experiência diferenciada aos nossos pacientes.</p>
+        <div class="mapa-clinica animar">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.068591984251!2d-34.836853100000006!3d-7.118049999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd17168e4747%3A0x48cb70015fd25877!2sDra%20J%C3%BAlia%20Vieira%20de%20S%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1746447730508!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>        
+        </div>
+        
+      </div>
+    </div>
+  </section>  
   <section class="avaliacoes" id="avaliacoes">
     <div class="container-avaliacoes animar">
       <img src="img/estrelas.png" alt="Imagem de avaliação" class="imagem-avaliacao animar">
