@@ -100,7 +100,7 @@
   .agendar-btn {
     display: flex;
     align-items: center;
-    background-color: #6a5b4c;
+    background-color: #26b62d;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -118,7 +118,7 @@
   
   
   .agendar-btn:hover {
-    background-color: #493e34;
+    background-color: #0f7414;
   }
   
   /* Hero Section (opcional) */
@@ -445,9 +445,17 @@
       font-size: 1rem;
   }
 
+
   .buscador-wrapper {
-      max-width: 100%;
-  }
+    width: 100%;
+    max-width: none; /* <- Adicionado */
+}
+
+.sugestoes {
+    position: relative; /* <- Garante que a lista fique abaixo corretamente */
+    width: 100%;
+    z-index: 5;
+}
 }
 
 /* Para telas menores que 480px */
