@@ -18,28 +18,23 @@ function toggleSugestoes() {
 
 
   document.addEventListener("DOMContentLoaded", function() {
-    // Seleciona todos os elementos que você quer animar
-    const elementos = document.querySelectorAll('.animar'); // Adicione a classe .animar aos elementos
+    const elementos = document.querySelectorAll('.animar');
 
-    // Função de callback para o Intersection Observer
     const callback = (entradas, observer) => {
         entradas.forEach(entrada => {
-            // Verifica se o elemento está visível na tela
             if (entrada.isIntersecting) {
-                entrada.target.classList.add('entrar'); // Adiciona a classe de animação
-                observer.unobserve(entrada.target); // Para de observar o elemento
+                entrada.target.classList.add('entrar');
+                observer.unobserve(entrada.target);
             }
         });
     };
 
-    // Configura o Intersection Observer
     const observer = new IntersectionObserver(callback, {
-        root: null, // Visor da janela
+        root: null,
         rootMargin: '0px',
-        threshold: 0.5 // 50% do elemento precisa estar visível
+        threshold: 0.5
     });
 
-    // Adiciona o observer para cada elemento
     elementos.forEach(elemento => {
         observer.observe(elemento);
     });
@@ -84,4 +79,4 @@ function toggleSugestoes() {
 
   setInterval(() => {
     mudarSlide(1);
-  }, 5000); // Muda a cada 5 segundos
+  }, 5000);
